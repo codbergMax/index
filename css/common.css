@@ -1,12 +1,12 @@
 @font-face {
   font-family: "LINESeedKR";
-  src: url(https://codbergmax.github.io/index/fonts/LINESeedKR-Bd.ttf);
+  src: url(../fonts/LINESeedKR-Bd.ttf);
   font-weight: bold;
 }
 
 @font-face {
   font-family: "LINESeedKR";
-  src: url(https://codbergmax.github.io/index/fonts/LINESeedKR-Rg.ttf);
+  src: url(../fonts/LINESeedKR-Rg.ttf);
   font-weight: normal;
 }
 
@@ -497,23 +497,17 @@ u {
 }
 
 .main_slider .swiper-slide-container .center:hover {
-  cursor: url(https://codbergmax.github.io/index/images/common_slide_cursor.png)
-      2 2,
-    auto;
+  cursor: url(../images/common_slide_cursor.png) 2 2, auto;
   z-index: 99999999 !important;
 }
 
 .main_slider .swiper-slide-container .left:hover {
-  cursor: url(https://codbergmax.github.io/index/images/common_slide_cursor_L.svg)
-      2 2,
-    auto;
+  cursor: url(../images/common_slide_cursor_L.svg) 2 2, auto;
   z-index: 99999999 !important;
 }
 
 .main_slider .swiper-slide-container .right:hover {
-  cursor: url(https://codbergmax.github.io/index/images/common_slide_cursor_R.svg)
-      2 2,
-    auto;
+  cursor: url(../images/common_slide_cursor_R.svg) 2 2, auto;
   z-index: 99999999 !important;
 }
 
@@ -745,9 +739,8 @@ u {
 
 .notice {
   padding: 113px 20px 180px;
-  background: #fcfcfc
-    url(https://codbergmax.github.io/index/images/main_S3_bgimg@3x.png) bottom -30px
-    center/802px no-repeat;
+  background: #fcfcfc url(/images/main_S3_bgimg@3x.png) bottom -30px center/802px
+    no-repeat;
 }
 .notice img:nth-child(1) {
   position: absolute;
@@ -796,16 +789,16 @@ u {
   color: #528bce;
   font-size: 18px;
   font-weight: bold;
-  background: url(https://codbergmax.github.io/index/images/common_ico_go_viewpage_off@3x.png)
-    right 0px/28px no-repeat;
+  background: url(/images/common_ico_go_viewpage_off@3x.png) right 0px/28px
+    no-repeat;
   text-align: left;
   height: 28px;
   line-height: 32px;
 }
 
 .notice_wrap a:hover {
-  background: url(https://codbergmax.github.io/index/images/common_ico_go_viewpage_on@3x.png)
-    right 0px/28px no-repeat;
+  background: url(/images/common_ico_go_viewpage_on@3x.png) right 0px/28px
+    no-repeat;
 }
 
 /* footer */
@@ -857,7 +850,7 @@ footer img {
   z-index: -1;
 }
 .franchise_main {
-  background-image: url(https://codbergmax.github.io/index/images/franchise_main_img@3x.png);
+  background-image: url(/images/franchise_main_img@3x.png);
   padding-top: 100px;
   background-size: 100% 100%;
   background-size: cover;
@@ -1068,9 +1061,8 @@ footer img {
 }
 .franchise_notice {
   padding: 113px 20px 210px;
-  background: #fcfcfc
-    url(https://codbergmax.github.io/index/images/main_S3_bgimg@3x.png) bottom -38px
-    center/802px no-repeat;
+  background: #fcfcfc url(../images/main_S3_bgimg@3x.png) bottom -38px center/802px
+    no-repeat;
 }
 .franchise_notice img:nth-child(1) {
   position: absolute;
@@ -1358,9 +1350,7 @@ p.etc01 {
 }
 
 .interior_inner .swiper-wrapper:hover {
-  cursor: url(https://codbergmax.github.io/index/images/common_slide_cursor_drag.png)
-      2 2,
-    auto;
+  cursor: url(../images/common_slide_cursor_drag.png) 2 2, auto;
   z-index: 99999999 !important;
 }
 
@@ -1755,8 +1745,7 @@ p.etc01 {
     display: block;
     width: 120px;
     height: 40px;
-    background: url(https://codbergmax.github.io/index/images/common_main_logo@3x.png)
-      no-repeat center/100% auto;
+    background: url(/images/common_main_logo@3x.png) no-repeat center/100% auto;
     transition: all 0.4s linear;
   }
   .m_header_in .topUtil {
@@ -2049,9 +2038,8 @@ p.etc01 {
 
   .notice {
     padding: 79px 20px 180px;
-    background: #fcfcfc
-      url(https://codbergmax.github.io/index/images/main_S3_bgimg@3x.png) bottom
-      47px center/540px no-repeat;
+    background: #fcfcfc url(/images/main_S3_bgimg@3x.png) bottom 47px
+      center/540px no-repeat;
   }
   .notice img:nth-child(1) {
     left: -27px;
@@ -2444,9 +2432,8 @@ p.etc01 {
     margin-bottom: 70px;
   }
   .franchise_notice {
-    background: #fcfcfc
-      url(https://codbergmax.github.io/index/images/main_S3_bgimg@3x.png) bottom
-      32px center/540px no-repeat;
+    background: #fcfcfc url(../images/main_S3_bgimg@3x.png) bottom 32px
+      center/540px no-repeat;
   }
 }
 /*******************************************************************************
