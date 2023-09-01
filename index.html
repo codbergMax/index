@@ -46,7 +46,7 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- 기본 제이쿼리 -->
     <script
       type="text/javascript"
@@ -165,7 +165,7 @@
         <div class="m_header_in">
           <h1>
             <a
-              href="https://codbergmax.github.io/index/index.html"
+              href="https://codbergmax.github.io/index/index.html#brand"
               title="인생돈가스"
             ></a>
           </h1>
@@ -514,7 +514,14 @@
           "https://codbergmax.github.io/index/sub/slider/mainSlider.html"
         );
       });
+
+      $(document).ready(function () {
+        $("a").click(function () {
+          if ($(".menu").hasClass("open")) {
+            $(".menu").removeClass("open");
+          }
+        });
+      });
     </script>
-    <script></script>
   </body>
 </html>
