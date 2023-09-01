@@ -517,9 +517,9 @@
 
       $(document).ready(function () {
         $("a").click(function () {
-          if ($(".menu").hasClass("open")) {
-            $(".menu").removeClass("open");
-          }
+          $(".menu").removeClass("visible");
+          $(".menu").animate({ height: "0" }, 500);
+          $("body").removeClass("noScroll");
         });
       });
     </script>
