@@ -13,13 +13,13 @@
   <body>
     <style>
       .menu-slider {
-				overflow: hidden;
+        overflow: hidden;
         cursor: -webkit-grab;
         width: 100%;
         position: relative;
         z-index: 1;
         height: 40vh;
-				display: block;
+        display: block;
       }
       .menu-slider.is-dragging {
         cursor: -webkit-grabbing;
@@ -37,9 +37,10 @@
         width: 100%;
       }
 
-			.menu-slider:hover {
-				cursor :url(/images/common_slide_cursor_scoll.svg) 2 2, auto;z-index: 9999 !important;
-			}
+      .menu-slider:hover {
+        cursor: url(/images/common_slide_cursor_scoll.svg) 2 2, auto;
+        z-index: 9999 !important;
+      }
 
       .menu--item {
         counter-increment: count;
@@ -55,7 +56,7 @@
         .menu--item {
           width: 40vw;
           height: 40vw;
-					padding: 0 10px;
+          padding: 0 10px;
         }
       }
       .menu--item:nth-child(n + 10):before {
@@ -141,31 +142,42 @@
     <div class="menu-slider">
       <div class="menu--wrapper">
         <div class="menu--item">
-          <figure><img src="/images/franchise_slide_img_1@3x.png" /></figure>
+          <figure>
+            <img src="../../images/franchise_slide_img_1@3x.png" />
+          </figure>
         </div>
         <div class="menu--item">
-          <figure><img src="/images/franchise_slide_img_2@3x.png" /></figure>
+          <figure>
+            <img src="../../images/franchise_slide_img_2@3x.png" />
+          </figure>
         </div>
         <div class="menu--item">
-          <figure><img src="/images/franchise_slide_img_3@3x.png" /></figure>
+          <figure>
+            <img src="../../images/franchise_slide_img_3@3x.png" />
+          </figure>
         </div>
         <div class="menu--item">
-				<figure><img src="/images/franchise_slide_img_4@3x.png" /></figure>
+          <figure>
+            <img src="../../images/franchise_slide_img_4@3x.png" />
+          </figure>
         </div>
         <div class="menu--item">
-          <figure><img src="/images/franchise_slide_img_5@3x.png" /></figure>
+          <figure>
+            <img src="../../images/franchise_slide_img_5@3x.png" />
+          </figure>
         </div>
         <div class="menu--item">
-          <figure><img src="/images/franchise_slide_img_6@3x.png" /></figure>
+          <figure>
+            <img src="../../images/franchise_slide_img_6@3x.png" />
+          </figure>
         </div>
       </div>
     </div>
-    
+
     <!-- partial -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <!-- <script src="./slider.js"></script> -->
     <script>
-      
       const $menuSilder = document.querySelector(".menu-slider");
       const $sliderItems = document.querySelectorAll(".menu--item");
       const $images = document.querySelectorAll(".menu--item img");
