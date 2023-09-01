@@ -739,7 +739,7 @@ u {
 
 .notice {
   padding: 113px 20px 180px;
-  background: #fcfcfc url(./images/main_S3_bgimg@3x.png) bottom -30px center/802px
+  background: #fcfcfc url(images/main_S3_bgimg@3x.png) bottom -30px center/802px
     no-repeat;
 }
 .notice img:nth-child(1) {
