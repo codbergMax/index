@@ -739,8 +739,9 @@ u {
 
 .notice {
   padding: 113px 20px 180px;
-  background: #fcfcfc url(/images/main_S3_bgimg@3x.png) bottom -30px center/802px
-    no-repeat;
+  background: #fcfcfc
+    url("https://codbergmax.github.io/index/images/main_S3_bgimg@3x.png") bottom -30px
+    center/802px no-repeat;
 }
 .notice img:nth-child(1) {
   position: absolute;
