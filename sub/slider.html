@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=`, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+	
+
+<style>
+    /* .swiper-slide {width: 450px !important;} */
+
+    .sample-slider{width:100%; margin-bottom: 100px;
+    }
+    .sample-slider:hover {cursor :url(../images/common_slide_cursor_drag.png) 2 2, auto;z-index: 99999999 !important;}
+    .sample-slider img{width: 100%;}
+    .sample-slider .swiper-wrapper{transition-timing-function: linear;}
+    .swiper-container img {width:100%; height: auto; display: block;}
+
+    @media all and (max-width:780px) {
+        .sample-slider{margin-bottom: 92px;}
+        /* .swiper-slide {width: 400px !important; overflow: hidden !important;} */
+    }
+</style>
+
+
+<div class="swiper sample-slider swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_1@3x.png"></div></div>
+        <div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_2@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_3@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_4@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_5@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_6@3x.png"></div></div>
+        <div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_1@3x.png"></div></div>
+        <div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_2@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_3@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_4@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_5@3x.png"></div></div>
+		<div class="swiper-slide"><div class="swiper-slide-container"><img src="../images/franchise_slide_img_6@3x.png"></div></div>
+    </div>
+</div>
+
+
+<script>
+	
+	$(document).ready(function() {
+    // 초기 스와이퍼 설정
+    var swiper = new Swiper('.sample-slider', {
+        loop: true,
+        speed: 4000,
+        slidesPerView: 4,
+        autoplay: {
+            delay: 0,
+        },
+    });
+
+    // 스와이퍼에 대한 마우스 오버 이벤트 핸들러 등록
+    swiper.el.addEventListener('mouseover', function() {
+        swiper.autoplay.stop()
+    });
+
+    // 문서(document) 전체에서 마우스 오버 이벤트 핸들러 등록
+    $(document).on('mouseover', function(event) {
+        var target = event.target;
+
+        if (!target.closest('.swiper-container')) {
+            swiper.autoplay.start();
+        }
+    });
+
+    // 윈도우 리사이징 이벤트 핸들러 등록
+    $(window).on('resize', function() {
+        // 윈도우의 너비를 가져와서 slidesPerView 값을 조정
+        var windowWidth = window.innerWidth;
+        if (windowWidth <= 780) {
+            swiper.params.slidesPerView = 3;
+        } else {
+            swiper.params.slidesPerView = 4;
+        }
+        swiper.update(); // 스와이퍼 업데이트
+
+        // 리사이징 이벤트 발생 시 수행할 작업들을 여기에 추가합니다
+        swiper.autoplay.stop();
+    });
+});
+
+</script>
+</body>
+</html>

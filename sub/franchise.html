@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="refresh" content="revealtrans(Duration=1, Transition=12)" />
+		<!-- Primary Meta Tags -->
+		<title>인생돈가스</title>
+		<meta name="title" content="인생돈가스" />
+		<meta name="description" content="인생에서 경험한 최고의 돈가스 - 인생돈가스" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://metatags.io/" />
+		<meta property="og:title" content="인생돈가스" />
+		<meta property="og:description" content="인생에서 경험한 최고의 돈가스 - 인생돈가스" />
+		<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://metatags.io/" />
+		<meta property="twitter:title" content="인생돈가스" />
+		<meta property="twitter:description" content="인생에서 경험한 최고의 돈가스 - 인생돈가스" />
+		<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+		<link rel="shortcut icon" href="../images/favicon@3x.png">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+		<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+		<script src="//code.jquery.com/jquery-1.12.4.js"></script>	<!-- 기본 제이쿼리 -->	
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+		<script type="text/javascript" src="../js/webpublisher.js"></script>	<!-- 메뉴 관련 제이쿼리 -->
+		<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script defer type="text/javascript" src="../js/scroll.js"></script>
+	</head>
+	<body>
+		
+		<style>
+			  .menu-slider {
+				background-image: linear-gradient(to top, rgb(255, 255, 255) 53%, #fffcf5);
+				overflow: hidden;
+        cursor: -webkit-grab;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        height: 40vh;
+				display: block;
+      }
+      .menu-slider.is-dragging {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+      }
+      .menu--wrapper {
+        counter-reset: count;
+        display: -webkit-box;
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+			.menu-slider:hover {
+				cursor :url(/images/common_slide_cursor_scoll.svg) 2 2, auto;z-index: 9999 !important;
+			}
+
+      .menu--item {
+        counter-increment: count;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100%;
+        overflow: hidden;
+      }
+      
+      .menu--item:nth-child(n + 10):before {
+        content: counter(count);
+      }
+      .menu--item figure {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-appearance: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+      }
+      .menu--item figure img {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        vertical-align: middle;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+      }
+			@media (max-width: 780px) {
+      
+				.menu--item figure img {
+					width: 100%;
+					height: 100%;
+				}
+      }s
+      .version {
+        display: inline-block;
+        position: fixed;
+        text-align: center;
+        z-index: 1;
+        text-decoration: none;
+        background: #333;
+        font-family: sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 10px;
+        box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        top: -30px;
+        right: -50px;
+        bottom: auto;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        border-radius: 0;
+        padding: 8px 30px;
+        font-size: 11px;
+      }
+      .version:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+        right: 0%;
+        background: transparent;
+      }
+      @media (max-width: 780px) {
+        .version {
+          -webkit-transform: scale(0.6) rotate(45deg);
+          transform: scale(0.6) rotate(45deg);
+          right: -100px;
+        }
+      }
+		</style>
+		<!-- Wrap -->
+		<div id="wrap" >
+			<!-- Pc Header -->
+			<header id="header">
+				<div class="inner">
+					<h1 class="logo_wrap">
+						<a href="/" class="logo">
+							<img src="../images/common_main_logo@3x.png" alt="logo" />
+							<span class="is_blind">인생돈가스</span>
+						</a>
+					</h1>
+					<nav id="gnb" class="nav_wrap main_nav">
+						<div class="nav_body">
+							<ul class="nav_list main_menu">
+								<li class="nav_item">
+									<a href="/index.html#brand" id="mainMenu01_label" class="nav_link">
+										<span>About</span>
+									</a>
+								</li>
+								<li class="nav_item">
+									<a href="/sub/menu.html" id="mainMenu02_label" class="nav_link">
+										<span>Menu</span>
+									</a>
+									<ul id="mainMenu02_dep2" class="nav_list type_dep2" aria-labelledby="mainMenu02_label">
+										<li class="nav_item">
+											<a href="/sub/pock.html" class="nav_link"><span>Pock cutlets</span></a>
+										</li>
+										<li class="nav_item">
+											<a href="/sub/pasta.html" class="nav_link"><span>Pasta & Risotto</span></a>
+										</li>
+										<li class="nav_item">
+											<a href="/sub/noodle.html" class="nav_link"><span>Noodle & Side</span></a>
+										</li>
+										<li class="nav_item">
+											<a href="/sub/newmenu.html"  class="nav_link"><span>New menu</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav_item">
+									<a href="/sub/franchise.html" id="mainMenu03_label" class="nav_link">
+										<span>Franchise</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<!-- Pc Header -->
+
+			<!-- Mobile Header -->
+			<div id="m_header" class="">
+				<div class="m_header_in">
+					<h1><a href="/" title="인생돈가스"></a></h1>
+					<ul class="topUtil">
+						<li class="menuBtn btn" title="menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /Mobile Header -->
+			<!-- Mobile menu -->
+			<div class="menu">
+				<div class="m_header">
+					<div class="m_header_in">
+						<h1><a href="/" title="인생돈가스"></a></h1>
+						<ul class="topUtil">
+							<li class="close btn" title="close">
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu_in">
+					<dl>
+						<dt><a href="/index.html#brand">ABOUT</a></dt>
+					</dl>
+					<dl>
+						<dt><a href="/sub/menu.html">Menu</a></dt>
+						<dd class="sMenu">
+							<a href="/sub/pock.html">Pock cutlets</a><br />
+							<a href="/sub/pasta.html">Pasta &amp; Risotto</a><br />
+							<a href="/sub/noodle.html">Noodle &amp; Side</a><br />
+							<a href="/sub/newmenu.html">New menu</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="/sub/franchise.html">Franchise</a></dt>
+					</dl>
+				</div>
+			</div>
+			<!-- Mobile menu -->
+
+			<section class="franchise_main">
+				<div class="fm_inner">
+					<img src="../images/common_typo_logo_W@3x.png" alt="인생돈가스" />
+					<p class="one fm_tit">"인생에서 경험한 최고의 돈가스" - 인생돈가스</p>
+					<div class="two fm_txt">
+						<p>다양한 토핑과 색다른 돈가스를 경험할 수 있는 인생돈가스는 동탄의 대표 맛집으로 <span>
+						2017년 런칭했습니다. 어디서나 볼 수 있는 돈가스가 아닌 오직 동탄에서만 맛 볼 수 있는 </span>
+						인생돈가스가 다양한 토핑의 색다른 돈가스를 전국에 다시 한 번 런칭하려고 합니다.</p>
+						<p>‘인생 돈가스’의 상징은 바로 연근 정화작용이 강한 연근은 깨끗한 음식을 만들겠다는 저희의 다짐입니다. <span>인생 돈가스는 매일 아침 배송되는 국내산 목우촌 등심을 사용하고 있습니다.</span>
+						최고의 돈육을 이용하기 때문에 최고의 맛을 보장합니다.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="interior">
+				<div class="interior_inner">
+					<p class="e_tit">Interior</p>
+					<p class="k_tit">인테리어</p>
+					<p class="in_txt in_txt01">인적이 드문 어느 한적한 시골길을 걷다<br /> 
+						버스정류장 옆에 있는 돈가스집을 발견했다.<br /> 
+						무언가 운명처럼 이끌린듯 들어간 그곳에서<br />
+						 찾았다 나의 인생돈가스</p>
+					<p class="in_txt in_txt02">한폭의 그림 속에 있는 것 같은 느낌의 인생돈가스<br />
+						새로운 디자인으로 시작합니다</p>
+				</div>
+			</section>
+
+			<div class="menu-slider">
+				<div class="menu--wrapper">
+					<div class="menu--item">
+						<figure><img src="/images/franchise_slide_img_1@3x.png" /></figure>
+					</div>
+					<div class="menu--item">
+						<figure><img src="/images/franchise_slide_img_2@3x.png" /></figure>
+					</div>
+					<div class="menu--item">
+						<figure><img src="/images/franchise_slide_img_3@3x.png" /></figure>
+					</div>
+					<div class="menu--item">
+					<figure><img src="/images/franchise_slide_img_4@3x.png" /></figure>
+					</div>
+					<div class="menu--item">
+						<figure><img src="/images/franchise_slide_img_5@3x.png" /></figure>
+					</div>
+					<div class="menu--item">
+						<figure><img src="/images/franchise_slide_img_6@3x.png" /></figure>
+					</div>
+				</div>
+			</div>
+
+			<section>
+				<div class="education_inner">
+					<p class="e_tit edu_tit">Education</p>
+					<p class="k_tit">교육시스템</p>
+					<p class="edu_txt">안정적인 매장 운영을 위해 메뉴얼 교육부터 현장실습, <span>운영지원까지 전문인력을 통한 밀착 교육을 진행합니다.</span></p>
+					<div class="education_img">
+						<div class="edu_img edu_img01">
+							<div class="pi_top">
+								<img src="../images/franchise_ico_1@3x.png" alt="운영 노하우 제공" />
+								<p class="edu_stit">운영 노하우 제공</p>
+							</div>
+						</div>
+						<div class="edu_img edu_img02">
+							<div class="pi_top">
+								<img src="../images/franchise_ico_2@3x.png" alt="체계적인 교육시스템" />
+								<p class="edu_stit">체계적인 교육시스템</p>
+							</div>
+						</div>
+						<div class="edu_img edu_img03">
+							<div class="pi_top">
+								<img src="../images/franchise_ico_3@3x.png" alt="본사의 지속적인 관리" />
+								<p class="edu_stit">본사의 지속적인 관리</p>
+							<div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="cost_wrap">
+					<div class="opening_inner">
+						<p class="e_tit">Opening cost</p>
+						<p class="k_tit">창업비용</p>
+						<div class="table">
+							<p class="ex_txt">단위: 만원 (부가세 별도)</p>
+							<table>
+								<thead>
+									<tr>
+										<th>구 분</th>
+										<th>내 용</th>
+										<th colspan="3">금 액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>가입비</td>
+										<td>가맹점 가입 / 상표권 부여</td>
+										<td colspan="3">500 → <span class="c_b">0</span></td>
+									</tr>
+									<tr>
+										<td>교육비</td>
+										<td>14일 집중교육</td>
+										<td colspan="3">300</td>
+									</tr>
+									<tr>
+										<td rowspan="3">인테리어</td>
+										<td rowspan="3">내부 인테리어<br /><span class="sm_txt">목공/금속/집기/조명<br />/도장/부설/설비 등</span></td>
+										<td colspan="2" class="bg_y">본사시공</td>
+										<td class="bg_y">감리</td>
+									</tr>
+									<tr>
+										<td>30평 이하</td>
+										<td>200/평</td>
+										<td colspan="2" rowspan="2">40/평</td>
+									</tr>
+									<tr>
+										<td>30평 이상</td>
+										<td style="border-right: 1px solid #f6de97;">180/평</td>
+									</tr>
+									<tr>
+										<td>주방집기</td>
+										<td>주방 냉장고 / 작업대 등</td>
+										<td colspan="3">1,000</td>
+									</tr>
+									<tr>
+										<td>전용그릇</td>
+										<td>전용 그릇 및 소모품 등</td>
+										<td colspan="3">350</td>
+									</tr>
+									<tr>
+										<td>전용 의탁자</td>
+										<td>전용 가구 등</td>
+										<td colspan="3">350</td>
+									</tr>
+									<tr>
+										<td>소모품</td>
+										<td>유니폼 / 인쇄물 / 사인물 본사지원</td>
+										<td colspan="3"><span class="c_b">100</span></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table_2 pc_table">
+								<tbody>
+									<tr>
+										<th>구분<span>(필요시)</span></th>
+										<td>철거/전기증설/화장실/냉난방/가스/공조/간판/외관공사
+											상하수도 유입공사/음향공사/소방</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="m_table" style="margin-top: 10px;">
+								<thead>
+									<tr>
+										<th>구분 <span>(필요시)</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>철거/전기증설/화장실/냉난방/가스/공조/간판/외관공사<span>상하수도 유입공사/음향공사/소방</span></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table_3 pc_table">
+								<tbody>
+									<tr>
+										<th rowspan="2">합계</th>
+										<td>기본 2,000 + 인테리어(25평) 5,000 + 별도사항 a</td>
+									</tr>
+									<tr>
+										<td>7,000 + a</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="m_table" style="margin-top: 10px;">
+								<thead>
+									<tr>
+										<th>합계</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>기본 2,000 + 인테리어(25평) 5,000 + 별도사항 a</td>
+									</tr>
+									<tr>
+										<td>7,000 + a</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p class="etc01">* 각 점포 상황에 따라 변동 가능</p>
+							<p class="etc02">* 계약이행보증금 200만원 계약 종료 시 반환 (보증보험으로 대체 가능합니다.)</p>
+						</div>
+					</div>
+
+					<div class="return_inner">
+						<p class="e_tit">Rate of return</p>
+						<p class="k_tit">수익률</p>
+						<div class="table pc_table">
+							<p class="ex_txt">단위: 만원 (부가세 제외)</p>
+							<table>
+								<thead>
+									<tr>
+										<th colspan="2">구분</th>
+										<th>15~20평 수익</th>
+										<th>비율</th>
+										<th>25~30평 수익</th>
+										<th>비율</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="2">월매출</td>
+										<td>3,000 ~ 3,500</td>
+										<td>100%</td>
+										<td>4,500 ~ 5,000</td>
+										<td>100%</td>
+									</tr>
+									<tr>
+										<td colspan="2">재료<span>매출원가</span></td>
+										<td>1,140 ~ 1,330</td>
+										<td>38%</td>
+										<td>1,575 ~ 1,750</td>
+										<td>35%</td>
+									</tr>
+									<tr>
+										<td class="bg_y" rowspan="3">판<br />관<br />비</td>
+										<td>인건비</td>
+										<td>750</td>
+										<td>21~25%</td>
+										<td>1000</td>
+										<td>20~22%</td>
+									</tr>
+									<tr>
+										<td>월세</td>
+										<td>150 (권장)</td>
+										<td>4~5%</td>
+										<td>300 (권장)</td>
+										<td>5~6%</td>
+									</tr>
+									<tr>
+										<td>잡비</td>
+										<td>100</td>
+										<td>3%</td>
+										<td>250</td>
+										<td>4~5%</td>
+									</tr>
+									<tr>
+										<td colspan="2">로열티</td>
+										<td>30 ~ 35</td>
+										<td>1%</td>
+										<td>300 (권장)</td>
+										<td>45 ~ 50</td>
+									</tr>
+									<tr>
+										<td colspan="2">영업이익</td>
+										<td>830~1,135</td>
+										<td>29~33%</td>
+										<td>1,330~1,650</td>
+										<td>30~34%</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p class="etc01">* 위 금액은 운영매장을 근거로한 목표치로 운영방식에 따라 변동될 수 있음.</p>
+							<p class="etc02">* 인건비는 점주가 직접 운영할 경우로 책정함.</p>
+						</div>
+
+						<div class="table m_table">
+							<p class="ex_txt">단위: 만원 (부가세 제외)</p>
+							<table>
+								<thead>
+									<tr>
+										<th>구분</th>
+										<th>15~20평 수익</th>
+										<th>비율</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>월매출</td>
+										<td>3,000 ~ 3,500</td>
+										<td>100%</td>
+									</tr>
+									<tr>
+										<td>재료<span>(매출원가)</span></td>
+										<td>1,140 ~ 1,330</td>
+										<td>38%</td>
+									</tr>
+									<tr>
+										<td>인건비</td>
+										<td>750</td>
+										<td>21~25%</td>
+									</tr>
+									<tr>
+										<td>월세</td>
+										<td>150 (권장)</td>
+										<td>4~5%</td>
+									</tr>
+									<tr>
+										<td>잡비</td>
+										<td>100</td>
+										<td>3%</td>
+									</tr>
+									<tr>
+										<td>로열티</td>
+										<td>30 ~ 35</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>영업이익</td>
+										<td>830~1,135</td>
+										<td>29~33%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="table m_table">
+							<p class="ex_txt">단위: 만원 (부가세 제외)</p>
+							<table>
+								<thead>
+									<tr>
+										<th>구분</th>
+										<th>25~30평 수익</th>
+										<th>비율</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>월매출</td>
+										<td>4,500 ~ 5,000</td>
+										<td>100%</td>
+									</tr>
+									<tr>
+										<td>재료<span>(매출원가)</span></td>
+										<td>1,575 ~ 1,750</td>
+										<td>38%</td>
+									</tr>
+									<tr>
+										<td>인건비</td>
+										<td>1,000</td>
+										<td>21~25%</td>
+									</tr>
+									<tr>
+										<td>월세</td>
+										<td>300 (권장)</td>
+										<td>4~5%</td>
+									</tr>
+									<tr>
+										<td>잡비</td>
+										<td>250</td>
+										<td>3%</td>
+									</tr>
+									<tr>
+										<td>로열티</td>
+										<td>45 ~ 50</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>영업이익</td>
+										<td>1,330~1,650</td>
+										<td>30~34%</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p class="etc01">* 위 금액은 운영매장을 근거로한 목표치로 운영방식에 따라 변동될 수 있음.</p>
+							<p class="etc02 mb0">* 인건비는 점주가 직접 운영할 경우로 책정함.</p>
+						</div>
+
+						<div class="box_wrap">
+							<div class="box_inner">
+								<div class="box_bg box_txt01">10호점까지 <span>가맹점 무료 혜택</span></div>
+								<div class="box_bg box_txt02"><img src="../images/common_main_logo@3x.png" /></div>
+							</div>
+							<div class="box_bg box_txt03">
+								손님과의, 또 손님들의 추억이 <span>차곡차곡 쌓여있는 가게로</span>오래오래 남아있고 싶습니다.
+								<span>대표 진민경</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="franchise_notice">
+				<img src="../images/common_symbol1@3x.png" alt="캐릭터" />
+				<img src="../images/common_symbol3@3x.png" alt="캐릭터" />
+				<img src="../images/common_symbol2@3x.png" alt="캐릭터" />
+				
+				<div class="franchise_notice_wrap">
+					<p class="n_txt01">인생 최고의 순간을 선사드립니다!<br />인생돈가스의 가족이 되어주세요.</p>
+					<p class="n_txt02">함께하실 예비 사장님들을 기다리고 있습니다.</p>
+					<p class="n_txt03">가맹문의</p>
+					<p class="n_txt04">1551-0204</p>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footer_inner">
+					<div class="f_logo"><img src="../images/invalid-name@3x.png" alt="footer_logo" /></div>
+					<div>
+						<p class="f_tit">address</p>
+						<p class="f_txt">경기도 화성시 동탄공원로3길 14-13, 1층(반송동)</p>
+					</div>
+					<div>
+						<p class="f_tit">tel</p>
+						<p class="f_txt">1551-0204</p>
+					</div>
+					<div>
+						<p class="f_tit">e-mail</p>
+						<p class="f_txt">insaengdongaseu@naver.com</p>
+					</div>
+				</div>
+				<p class="copy">© Copyright 2023 인생돈가스. All rights reserved.</p>
+			</footer>
+		</div>
+		<!-- //wrap -->
+
+		<script>
+			// 섹션별 스크롤 이벤트
+			//// education_inner 섹션
+		
+			
+		</script>
+		<script>
+			$(document).ready(function() {
+				// Load the content of included.html into the div with id "includedContent"
+				$('#franchiseSlider').load('../sub/slider/franchiseSlider.html');
+			});
+		</script>
+		<script>
+			const $menuSilder = document.querySelector(".menu-slider");
+      const $sliderItems = document.querySelectorAll(".menu--item");
+      const $images = document.querySelectorAll(".menu--item img");
+      let menuWidth = $menuSilder.clientWidth;
+      let itemWidth = $sliderItems[0].clientWidth;
+      let wrapWidth = $sliderItems.length * itemWidth;
+      let scrollSpeed = 0;
+      let oldScrollY = 0;
+      let silderScrollY = 0;
+      let y = 0;
+      /*--------------------
+   Lerp
+   --------------------*/
+      const lerp = (v0, v1, t) => {
+        return v0 * (1 - t) + v1 * t;
+      };
+      /*--------------------
+   Dispose
+   --------------------*/
+      const dispose = (scroll) => {
+        gsap.set($sliderItems, {
+          x: (i) => {
+            return i * itemWidth + scroll;
+          },
+          modifiers: {
+            x: (x, target) => {
+              const s = gsap.utils.wrap(
+                -itemWidth,
+                wrapWidth - itemWidth,
+                parseInt(x)
+              );
+              return `${s}px`;
+            },
+          },
+        });
+      };
+      dispose(0);
+      const loop = gsap.to(
+        {},
+        {
+          duration: 2, // 1초 간격으로 이미지 변경
+          repeat: -1,
+          onRepeat: () => {
+            silderScrollY -= itemWidth; // 이미지를 반대 방향으로 한 단위만큼 이동시킵니다.
+            // if (scrollY < -wrapWidth) {
+            // //   scrollY = 0; // 이미지를 처음으로 돌아가게 만듭니다.
+            // }
+          },
+        }
+      );
+      $menuSilder.addEventListener("mouseenter", () => {
+        isHovered = false;
+        loop.pause();
+      });
+      $menuSilder.addEventListener("mouseleave", () => {
+        isHovered = true;
+        loop.play();
+      });
+      //   $menu.addEventListener("mousewheel", handleMouseWheel);
+      /*--------------------
+            Wheel
+            --------------------*/
+      const handleMouseWheel = (e) => {
+        if (!isHovered) {
+          silderScrollY -= e.deltaY * 0.9;
+        }
+      };
+      $menuSilder.addEventListener("mousewheel", handleMouseWheel);
+      /*--------------------
+   Touch
+   --------------------*/
+      let touchStart = 0;
+      let touchX = 0;
+      let isDragging = false;
+      const handleTouchStart = (e) => {
+        touchStart = e.clientX || e.touches[0].clientX;
+        isDragging = true;
+        $menuSilder.classList.add("is-dragging");
+      };
+      const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        touchX = e.clientX || e.touches[0].clientX;
+        silderScrollY += (touchX - touchStart) * 2.5;
+        touchStart = touchX;
+      };
+      const handleTouchEnd = () => {
+        isDragging = false;
+        $menuSilder.classList.remove("is-dragging");
+      };
+      $menuSilder.addEventListener("touchstart", handleTouchStart);
+      $menuSilder.addEventListener("touchmove", handleTouchMove);
+      $menuSilder.addEventListener("touchend", handleTouchEnd);
+      /*--------------------
+   Listeners
+   --------------------*/
+      $menuSilder.addEventListener("mousewheel", handleMouseWheel);
+      $menuSilder.addEventListener("touchstart", handleTouchStart);
+      $menuSilder.addEventListener("touchmove", handleTouchMove);
+      $menuSilder.addEventListener("touchend", handleTouchEnd);
+      $menuSilder.addEventListener("mousedown", handleTouchStart);
+      $menuSilder.addEventListener("mousemove", handleTouchMove);
+      $menuSilder.addEventListener("mouseleave", handleTouchEnd);
+      $menuSilder.addEventListener("mouseup", handleTouchEnd);
+      $menuSilder.addEventListener("selectstart", () => {
+        return false;
+      });
+      /*--------------------
+                                                              Resize
+                                                              --------------------*/
+      window.addEventListener("resize", () => {
+        menuWidth = $menuSilder.clientWidth;
+        itemWidth = $sliderItems[0].clientWidth;
+        wrapWidth = $sliderItems.length * itemWidth;
+      });
+      /*--------------------
+    Render
+    --------------------*/
+      const render = () => {
+        requestAnimationFrame(render);
+        y = lerp(y, silderScrollY, 0.1);
+        dispose(y);
+        scrollSpeed = y - oldScrollY;
+        oldScrollY = y;
+        gsap.to($sliderItems, {
+          skewX: 0, // 기울기 효과 제거
+          rotate: 0, // 회전 효과 제거
+        });
+      };
+      render();
+
+			$(document).ready(function() {
+				addEventListener("scroll", function () {
+					if (scrollY > document.querySelector(".education_inner").offsetTop - 200) {
+						document.querySelector(".education_inner").classList.add("this_sec");
+					}
+				});
+			});
+    </script>
+		
+	</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <link rel="stylesheet" href="./slider.css" /> -->
+  </head>
+  <body>
+    <style>
+      .menu-slider {
+				overflow: hidden;
+        cursor: -webkit-grab;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        height: 40vh;
+				display: block;
+      }
+      .menu-slider.is-dragging {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+      }
+      .menu--wrapper {
+        counter-reset: count;
+        display: -webkit-box;
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+			.menu-slider:hover {
+				cursor :url(/images/common_slide_cursor_scoll.svg) 2 2, auto;z-index: 9999 !important;
+			}
+
+      .menu--item {
+        counter-increment: count;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100%;
+        overflow: hidden;
+      }
+      @media (max-width: 767px) {
+        .menu--item {
+          width: 40vw;
+          height: 40vw;
+					padding: 0 10px;
+        }
+      }
+      .menu--item:nth-child(n + 10):before {
+        content: counter(count);
+      }
+      .menu--item figure {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-appearance: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+      }
+      .menu--item figure img {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        vertical-align: middle;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+      }
+      .version {
+        display: inline-block;
+        position: fixed;
+        text-align: center;
+        z-index: 1;
+        text-decoration: none;
+        background: #333;
+        font-family: sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 10px;
+        box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        top: -30px;
+        right: -50px;
+        bottom: auto;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        border-radius: 0;
+        padding: 8px 30px;
+        font-size: 11px;
+      }
+      .version:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+        right: 0%;
+        background: transparent;
+      }
+      @media (max-width: 767px) {
+        .version {
+          -webkit-transform: scale(0.6) rotate(45deg);
+          transform: scale(0.6) rotate(45deg);
+          right: -100px;
+        }
+      }
+    </style>
+
+    <div class="menu-slider">
+      <div class="menu--wrapper">
+        <div class="menu--item">
+          <figure><img src="/images/franchise_slide_img_1@3x.png" /></figure>
+        </div>
+        <div class="menu--item">
+          <figure><img src="/images/franchise_slide_img_2@3x.png" /></figure>
+        </div>
+        <div class="menu--item">
+          <figure><img src="/images/franchise_slide_img_3@3x.png" /></figure>
+        </div>
+        <div class="menu--item">
+				<figure><img src="/images/franchise_slide_img_4@3x.png" /></figure>
+        </div>
+        <div class="menu--item">
+          <figure><img src="/images/franchise_slide_img_5@3x.png" /></figure>
+        </div>
+        <div class="menu--item">
+          <figure><img src="/images/franchise_slide_img_6@3x.png" /></figure>
+        </div>
+      </div>
+    </div>
+    
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <!-- <script src="./slider.js"></script> -->
+    <script>
+      
+      const $menuSilder = document.querySelector(".menu-slider");
+      const $sliderItems = document.querySelectorAll(".menu--item");
+      const $images = document.querySelectorAll(".menu--item img");
+      let menuWidth = $menuSilder.clientWidth;
+      let itemWidth = $sliderItems[0].clientWidth;
+      let wrapWidth = $sliderItems.length * itemWidth;
+      let scrollSpeed = 0;
+      let oldScrollY = 0;
+      let scrollY = 0;
+      let y = 0;
+      /*--------------------
+   Lerp
+   --------------------*/
+      const lerp = (v0, v1, t) => {
+        return v0 * (1 - t) + v1 * t;
+      };
+      /*--------------------
+   Dispose
+   --------------------*/
+      const dispose = (scroll) => {
+        gsap.set($sliderItems, {
+          x: (i) => {
+            return i * itemWidth + scroll;
+          },
+          modifiers: {
+            x: (x, target) => {
+              const s = gsap.utils.wrap(
+                -itemWidth,
+                wrapWidth - itemWidth,
+                parseInt(x)
+              );
+              return `${s}px`;
+            },
+          },
+        });
+      };
+      dispose(0);
+      const loop = gsap.to(
+        {},
+        {
+          duration: 1, // 1초 간격으로 이미지 변경
+          repeat: -1,
+          onRepeat: () => {
+            scrollY -= itemWidth; // 이미지를 반대 방향으로 한 단위만큼 이동시킵니다.
+            // if (scrollY < -wrapWidth) {
+            // //   scrollY = 0; // 이미지를 처음으로 돌아가게 만듭니다.
+            // }
+          },
+        }
+      );
+      $menuSilder.addEventListener("mouseenter", () => {
+        isHovered = false;
+        loop.pause();
+      });
+      $menuSilder.addEventListener("mouseleave", () => {
+        isHovered = true;
+        loop.play();
+      });
+      //   $menu.addEventListener("mousewheel", handleMouseWheel);
+      /*--------------------
+            Wheel
+            --------------------*/
+      const handleMouseWheel = (e) => {
+        if (!isHovered) {
+          scrollY -= e.deltaY * 0.9;
+        }
+      };
+      $menuSilder.addEventListener("mousewheel", handleMouseWheel);
+      /*--------------------
+   Touch
+   --------------------*/
+      let touchStart = 0;
+      let touchX = 0;
+      let isDragging = false;
+      const handleTouchStart = (e) => {
+        touchStart = e.clientX || e.touches[0].clientX;
+        isDragging = true;
+        $menuSilder.classList.add("is-dragging");
+      };
+      const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        touchX = e.clientX || e.touches[0].clientX;
+        scrollY += (touchX - touchStart) * 2.5;
+        touchStart = touchX;
+      };
+      const handleTouchEnd = () => {
+        isDragging = false;
+        $menuSilder.classList.remove("is-dragging");
+      };
+      $menuSilder.addEventListener("touchstart", handleTouchStart);
+      $menuSilder.addEventListener("touchmove", handleTouchMove);
+      $menuSilder.addEventListener("touchend", handleTouchEnd);
+      /*--------------------
+   Listeners
+   --------------------*/
+      $menuSilder.addEventListener("mousewheel", handleMouseWheel);
+      $menuSilder.addEventListener("touchstart", handleTouchStart);
+      $menuSilder.addEventListener("touchmove", handleTouchMove);
+      $menuSilder.addEventListener("touchend", handleTouchEnd);
+      $menuSilder.addEventListener("mousedown", handleTouchStart);
+      $menuSilder.addEventListener("mousemove", handleTouchMove);
+      $menuSilder.addEventListener("mouseleave", handleTouchEnd);
+      $menuSilder.addEventListener("mouseup", handleTouchEnd);
+      $menuSilder.addEventListener("selectstart", () => {
+        return false;
+      });
+      /*--------------------
+                                                              Resize
+                                                              --------------------*/
+      window.addEventListener("resize", () => {
+        menuWidth = $menuSilder.clientWidth;
+        itemWidth = $sliderItems[0].clientWidth;
+        wrapWidth = $sliderItems.length * itemWidth;
+      });
+      /*--------------------
+    Render
+    --------------------*/
+      const render = () => {
+        requestAnimationFrame(render);
+        y = lerp(y, scrollY, 0.1);
+        dispose(y);
+        scrollSpeed = y - oldScrollY;
+        oldScrollY = y;
+        gsap.to($sliderItems, {
+          skewX: 0, // 기울기 효과 제거
+          rotate: 0, // 회전 효과 제거
+        });
+      };
+      render();
+    </script>
+  </body>
+</html>
