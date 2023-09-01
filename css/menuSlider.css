@@ -1,9 +1,15 @@
-
 /*=========================================================
   Swiper Basic CSS
 =========================================================*/
-.site-content {height: 947px;}
-.menuslider_mtit {color: #528bce; font-size: 32px; font-weight: bold;margin-top: 120px;}
+.site-content {
+  height: 947px;
+}
+.menuslider_mtit {
+  color: #528bce;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 120px;
+}
 .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -25,7 +31,10 @@
   transform: translate3d(0px, 0, 0);
 }
 .swiper-wrapper:hover {
-	cursor :url(../images/common_slide_cursor_scoll.svg) 2 2, auto;z-index: 9999 !important;
+  cursor: url(https://codbergmax.github.io/index/images/common_slide_cursor_scoll.svg)
+      2 2,
+    auto;
+  z-index: 9999 !important;
 }
 .swiper-slide {
   flex-shrink: 0;
@@ -47,8 +56,8 @@
   align-items: center;
 }
 
-.swiper-container-fade .swiper-slide{
-    transition-property: opacity;
+.swiper-container-fade .swiper-slide {
+  transition-property: opacity;
 }
 
 .swiper-button-disabled {
@@ -74,7 +83,7 @@
 }
 
 .swiper-scrollbar-drag {
-  opacity:0;
+  opacity: 0;
   height: 0px;
   width: 100%;
   position: relative;
@@ -98,13 +107,17 @@
   display: none;
 }
 
-.site-main > .site-container{
-	overflow:visible;
+.site-main > .site-container {
+  overflow: visible;
 }
 
-@media all and (max-width:780px) {
-  
-  .site-content {height: fit-content;} 
-  .menuslider_mtit {font-size: 28px; margin-top: 92px; margin-bottom: 25px;}
-
+@media all and (max-width: 780px) {
+  .site-content {
+    height: fit-content;
+  }
+  .menuslider_mtit {
+    font-size: 28px;
+    margin-top: 92px;
+    margin-bottom: 25px;
+  }
 }
