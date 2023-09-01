@@ -739,7 +739,7 @@ u {
 
 .notice {
   padding: 113px 20px 180px;
-  background: #fcfcfc url(/images/main_S3_bgimg@3x.png) bottom -30px center/802px
+  background: #fcfcfc url(../images/main_S3_bgimg@3x.png) bottom -30px center/802px
     no-repeat;
 }
 .notice img:nth-child(1) {
@@ -789,7 +789,7 @@ u {
   color: #528bce;
   font-size: 18px;
   font-weight: bold;
-  background: url(/images/common_ico_go_viewpage_off@3x.png) right 0px/28px
+  background: url(../images/common_ico_go_viewpage_off@3x.png) right 0px/28px
     no-repeat;
   text-align: left;
   height: 28px;
@@ -797,7 +797,7 @@ u {
 }
 
 .notice_wrap a:hover {
-  background: url(/images/common_ico_go_viewpage_on@3x.png) right 0px/28px
+  background: url(../images/common_ico_go_viewpage_on@3x.png) right 0px/28px
     no-repeat;
 }
 
@@ -850,7 +850,7 @@ footer img {
   z-index: -1;
 }
 .franchise_main {
-  background-image: url(/images/franchise_main_img@3x.png);
+  background-image: url(../images/franchise_main_img@3x.png);
   padding-top: 100px;
   background-size: 100% 100%;
   background-size: cover;
@@ -1745,7 +1745,8 @@ p.etc01 {
     display: block;
     width: 120px;
     height: 40px;
-    background: url(/images/common_main_logo@3x.png) no-repeat center/100% auto;
+    background: url(../images/common_main_logo@3x.png) no-repeat center/100%
+      auto;
     transition: all 0.4s linear;
   }
   .m_header_in .topUtil {
@@ -2038,7 +2039,7 @@ p.etc01 {
 
   .notice {
     padding: 79px 20px 180px;
-    background: #fcfcfc url(/images/main_S3_bgimg@3x.png) bottom 47px
+    background: #fcfcfc url(../images/main_S3_bgimg@3x.png) bottom 47px
       center/540px no-repeat;
   }
   .notice img:nth-child(1) {
